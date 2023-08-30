@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
-import 'page.dart';
+
+//imports of the different pages
+import 'bottom navigation/homePage.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Any 5 widgets',
-      home: MyPage(),
+    return const MaterialApp(
+      title: 'Sprallery',
+      home: HomePage(),
     );
   }
 }
