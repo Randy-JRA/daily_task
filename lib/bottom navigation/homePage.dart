@@ -4,16 +4,21 @@ import 'package:flutter/material.dart';
 //imports of the different pages
 import 'bottomNavigationbar.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
   @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'daily task',
-      home: Scaffold(
+    return Scaffold(
+      backgroundColor: Colors.brown,
         appBar: AppBar(
-          title: const Text('My Daily Widgets'),
+          title: const Text('Sprallery'),
+          backgroundColor: Colors.blue,
         ),
         body: Center(
           child: Container(
@@ -46,8 +51,7 @@ class HomePage extends StatelessWidget {
             ),
           ),
         ),
-        bottomNavigationBar: BottomNavigation(),
-      ),
+        bottomNavigationBar: const BottomNavigation(),
     );
   }
 }
