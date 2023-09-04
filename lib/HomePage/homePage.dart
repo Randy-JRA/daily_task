@@ -70,9 +70,9 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(height: 20,),
 
             //here below is a tab bar
-            DefaultTabController(
-                length: 3,
-                child: Expanded(
+            Flexible(
+              child: DefaultTabController(
+                  length: 3,
                   child: Column(
                     children: [
                       const TabBar(
@@ -93,47 +93,48 @@ class _HomePageState extends State<HomePage> {
                         ],
                       ),
                       const SizedBox(height: 20.0,),
-                      Container(
-                        height: 300,
-                        child: TabBarView(
-                          children: [
-                            //below is our first tab view
-                            Container(
-                              child: ListView(
-                                scrollDirection: Axis.horizontal,
-                                children: [
-                                  //testing the card
-                                  galleryCard(urls[0], "Avengers", "New York", 2),
-                                  galleryCard(urls[1], "Avengers", "New York", 1),
-                                  galleryCard(urls[2], "Avengers", "New York", 3),
-                                ],
+                      Flexible(
+                        child: Container(
+                          child: TabBarView(
+                            children: [
+                              //below is our first tab view
+                              Container(
+                                child: ListView(
+                                  scrollDirection: Axis.horizontal,
+                                  children: [
+                                    //testing the card
+                                    galleryCard(urls[0], "Avengers", "New York", 2),
+                                    galleryCard(urls[1], "Avengers", "New York", 1),
+                                    galleryCard(urls[2], "Avengers", "New York", 3),
+                                  ],
+                                ),
                               ),
-                            ),
-                            Container(
-                              child: ListView(
-                                scrollDirection: Axis.horizontal,
-                                children: [
-                                  galleryCard(urls[1], "Avengers", "New York", 1),
-                                  galleryCard(urls[2], "Avengers", "New York", 3),
-                                ],
+                              Container(
+                                child: ListView(
+                                  scrollDirection: Axis.horizontal,
+                                  children: [
+                                    galleryCard(urls[1], "Avengers", "New York", 1),
+                                    galleryCard(urls[2], "Avengers", "New York", 3),
+                                  ],
+                                ),
                               ),
-                            ),
-                            Container(
-                              child: ListView(
-                                scrollDirection: Axis.horizontal,
-                                children: [
-                                  galleryCard(urls[1], "Avengers", "New York", 3),
-                                  galleryCard(urls[2], "Avengers", "New York", 1),
-                                ],
+                              Container(
+                                child: ListView(
+                                  scrollDirection: Axis.horizontal,
+                                  children: [
+                                    galleryCard(urls[1], "Avengers", "New York", 3),
+                                    galleryCard(urls[2], "Avengers", "New York", 1),
+                                  ],
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
 
                     ],
-                  ),
-                )
+                  )
+              ),
             ),
           ],
         ),
