@@ -10,9 +10,7 @@ class DrawerPage extends StatefulWidget {
 class _DrawerPageState extends State<DrawerPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.brown,
-      drawer: Drawer(
+    return Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
@@ -42,7 +40,6 @@ class _DrawerPageState extends State<DrawerPage> {
             ),
           ],
         ),
-      ),
-    );
+      );
   }
 }
