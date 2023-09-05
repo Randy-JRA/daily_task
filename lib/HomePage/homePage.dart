@@ -1,5 +1,6 @@
 import 'package:daily_task/Components/gallerycard.dart';
 import 'package:flutter/material.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
 
 import '../DrawerPage/drawerPage.dart';
 
@@ -137,6 +138,45 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ],
+        ),
+      ),
+      bottomNavigationBar: Container(
+        color: Colors.black,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20,),
+          child: GNav(
+            backgroundColor: Colors.black,
+            color: Colors.white,
+            activeColor: Colors.white,
+            tabBackgroundColor: Colors.grey.shade800,
+            gap: 8,
+            padding: const EdgeInsets.all(16),
+            onTabChange: (index) {
+              print(index);
+            },
+            tabs: const [
+              GButton(
+                icon: Icons.notifications,
+                text: 'Notifications',
+              ),
+              GButton(
+                  icon: Icons.favorite_border,
+                  text: 'Favorite',
+              ),
+              GButton(
+                icon: Icons.home,
+                text: 'Home',
+              ),
+              GButton(
+                  icon: Icons.search,
+                  text: 'Search',
+              ),
+              GButton(
+                  icon: Icons.settings,
+                  text: 'Settings',
+              ),
+            ],
+          ),
         ),
       ),
     );
