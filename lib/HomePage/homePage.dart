@@ -165,7 +165,7 @@ class _HomePageState extends State<HomePage> {
               ),
               GButton(
                 icon: Icons.home,
-                text: 'Home',
+                text: 'Hom',
               ),
               GButton(
                   icon: Icons.search,
